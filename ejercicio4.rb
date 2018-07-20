@@ -42,14 +42,14 @@
 #
 #   puts "El texto es: #{palabra.reverse.upcase}"
 
-puts "Escribe una palabra para saber si es palindrome"
-
-palabra1 = gets.chomp
-
-palabra2 = palabra1.reverse
-
-if palabra1==palabra2
-  puts "Es palindrome"
-else
-  puts "No es palindrome"
-end
+# puts "Escribe una palabra para saber si es palindrome"
+#
+# palabra1 = gets.chomp
+#
+# palabra2 = palabra1.reverse
+#
+# if palabra1==palabra2
+#   puts "Es palindrome"
+# else
+#   puts "No es palindrome"
+# end
