@@ -5,9 +5,8 @@
 # 4. Que tenga un metodo que reciba el nombre del usuario y retorne su teléfono.
 # 5. Al ejecutarse el programa se carga automáticamente el archivo de texto, debe preguntarle que quiere hacer:  Agregar un teléfono, Buscar un teléfono,  imprimir el directorio completo ó salir.
 
-def Importar    
-    directorio = IO.readlines("directorio.txt")
- end
+directorio = hash.new.split(",")
+    directorio[File.read("directorio.txt")]=
 
 puts "Bienvenido al Directorio Telefónico"
 puts "¿Que deseas hacer?"
@@ -18,26 +17,17 @@ puts "Selecciona una opción"
 numero = gets.chomp.to_i
 
 case numero
-    when 1 then 
-        puts "elegiste 1"
-    when 2 then 
-        puts "elegiste 2"
-    when 3 then 
-        puts "elegiste 3"
-    else
-        puts "Error al ingresar la opción"
-end
+     when 1 then  
+         print "Ingresa el nombre: "
+         nuevo_nombre = gets.chomp
+         print "Ingresa el numero: "
+         nuevo_numero = gets.chomp.to_i
+         directorio.join   
+     when 2 then 
+         puts "elegiste 2"
+     when 3 then 
+         puts "elegiste 3"
+     else
+         puts "Error al ingresar la opción"
+ end
 
-
-
-# def agregar
-
-# end
-
-# def Buscar
-
-# end
-
-# def visualizar
-
-# end
