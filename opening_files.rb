@@ -17,10 +17,10 @@
 #
 # File.write("archivo2.txt", "#{copiar}")
 
-file_as_array = IO.readlines("numeros.txt")
+file_as_array = IO.readlines("directorio.txt")
 
 file_as_array.each do |numero|
-  p numero
+  puts numero
 end
 
 

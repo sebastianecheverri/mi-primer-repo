@@ -5,29 +5,37 @@
 # 4. Que tenga un metodo que reciba el nombre del usuario y retorne su teléfono.
 # 5. Al ejecutarse el programa se carga automáticamente el archivo de texto, debe preguntarle que quiere hacer:  Agregar un teléfono, Buscar un teléfono,  imprimir el directorio completo ó salir.
 
-directorio = hash.new.split(",")
-    directorio[File.read("directorio.txt")]=
+# def importar(directorio)
+#     dir = IO.readlines(directorio)
+#     dir.map! { |e|e.split(";")}
+#     dir.size.times do |i|
+#         @directorio[dir[i][0].to_sym] = ((dir[i][1]).split(" "))[0].to_i
 
-puts "Bienvenido al Directorio Telefónico"
-puts "¿Que deseas hacer?"
-puts "1. Agregar un teléfono"
-puts "2. Buscar un teléfono"
-puts "3. Ver el directorio"
-puts "Selecciona una opción"
-numero = gets.chomp.to_i
 
-case numero
-     when 1 then  
-         print "Ingresa el nombre: "
-         nuevo_nombre = gets.chomp
-         print "Ingresa el numero: "
-         nuevo_numero = gets.chomp.to_i
-         directorio.join   
-     when 2 then 
-         puts "elegiste 2"
-     when 3 then 
-         puts "elegiste 3"
-     else
-         puts "Error al ingresar la opción"
- end
+#  puts "Bienvenido al Directorio Telefónico"
+#  puts "¿Que deseas hacer?"
+#  puts "1. Agregar un contacto"
+#  puts "2. Buscar un contacto"
+#  puts "3. Ver el directorio"
+#  puts "Selecciona una opción"
+#  numero = gets.chomp.to_i
 
+# case numero
+    #  when 1 then  
+    #       print "Ingresa el nombre: "
+    #          nuevo_nombre = gets.chomp
+    #       print "Ingresa el numero: "
+    #          nuevo_numero = gets.chomp.to_i    
+    #  File.open("directorio.txt", 'a') { |directorio.txt| directorio.txt.puts("nuevo_nombre") }
+    
+#      when 2 then 
+#          puts "Ingresa el nombre de contacto que quieres buscar"
+#          nombre = gets.chomp
+#             File.read
+
+#     when 3 then 
+#         puts agenda
+
+#     else
+#         puts "Opción no valida"
+# end
