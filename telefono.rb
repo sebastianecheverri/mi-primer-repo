@@ -1,45 +1,51 @@
 # Defina una clase Teléfono con la que se pueda:
 class Phone
+attr_accessor :busy
 
         @@call_duration = 0
-        @@phones = 0
+        @@devices = 0
 
-       attr_accessor :call, :bussy, :name, :directory, :tel
 
     def initialize
-        @call = true
-        @bussy = false
-        @name = ""
-        @tel = 0
-        @directory = {}
+        @busy = false
+        @history = []
+        @current_call = {}
     end
 
     # 1. hacer un llamada (no se puede hacer una llamada si el teléfono esta ocupado)
+    # en las current_call quedan guardadas las llamadas en un hash, y su vez estas quedan guardadas en history que sera un array de hashes
 
-    def make_call (directory)
-        if @bussy = false
-        puts "Ingresa el nombre del contacto"
-        @name = gets.chomp
-        puts "Ingresa el numero de telefono"
-        @tel = gets.chomp.to_i
-        
-        end
-    end
+
+    # def make_call(name,tel)
+    #     return puts "Telefono ocupado" if @busy
+    #         if phone.to_s.length == 10
+    #             @busy = true
+    #             puts "Llamando al #{phone}..."
+    #             sleep 3
+    #             @current_call = create_call(phone)
+    #             puts "Numero equivocado"
+    #         else
+    #             puts "Numero equivocado"
+    #     end
+    # end
 
 # 2. mostrar llamada actual (nombre y numero)
-    def on_call ()
-
-    end
+    #  def colgar
+    #     return puts "Telefono disponible" unless @busy
+    #     @current_call[:duration] = duration.round(2)
+    #     add_to_history(@current_call)
+        
+    #  end
 
 # 3. colgar
-    def finish_call()
+    # def finish_call()
     
-    end
+    # end
     
 # 4. mostrar historial de llamadas, cada llamada almacena la duración de la misma.
-    def call_history()
+    # def call_history()
     
-    end
+    # end
 
 end    
 
