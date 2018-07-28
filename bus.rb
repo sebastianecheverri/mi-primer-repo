@@ -106,18 +106,25 @@ class MicroBus < Bus
     attr_accessor :rutas
 
     def initialize(asientos, rutas)
+        super(asientos)
         @rutas = rutas
     end
 
-    def ruta(time)
-        time.now.round(2) = time
-        time.include
+    def ruta_actual(time)
+        @rutas.each do |ruta, horario|
+            if horario.include?(time)
+               return puts "La ruta es #{ruta}"
+            end
 
+        end
+        puts "No hay rutas a esa hora"
+    end
 end
 
 # class SuperBus < Bus
 #     attr_accessor :pasajeros, :velocidad, :asientos, :disponible, :nombre_ruta1, :nombre_ruta2
 # end
 
-p3 = MicroBus.New(25, {rutasur: [6..9], rutanorte: [9..12],})
+p3 = MicroBus.new(25, {ruta_sur: Array(6..9), ruta_norte: Array(10..12)})
 
+puts p3.ruta_actual(11)
