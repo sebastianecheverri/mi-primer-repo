@@ -128,3 +128,5 @@ end
 p3 = MicroBus.new(25, {ruta_sur: Array(6..9), ruta_norte: Array(10..12)})
 
 puts p3.ruta_actual(11)
+
+module Conexiones
