@@ -1,4 +1,19 @@
-<h1>Home</h1>
-<p><strong>Estoy en Home</strong></p>
-"Estoy en Home"
-<% puts = "Welcome" %>
+<h1>Welcome <%=@name %> to my first app with Sinatra </h1>
+
+<h2>All Posts</h2>
+<ul>
+    <% @posts.each do |post| %>
+    <li>
+    <a href="/post/<%= post.id %>"><%= post.title %></a> | <% post.created_at %>
+    </li>
+    <% end %>
+</ul>
+
+<h2>Add Post</h2>
+<form method="post" action="/post">
+    <label for="title">Title: </label>
+    <input type="text" name="title">
+    <label for="body">Body: </label>
+    <input type="text" name="body">
+    <input type="submit" value="Add Post">
+</form>

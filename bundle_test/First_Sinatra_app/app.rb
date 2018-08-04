@@ -1,4 +1,10 @@
-require "sinatra"
+require 'bundler/setup'
+Bundler.require(:default)
+require "./models.rb"
+
+set :database, "sqlite3:myblogdb.sqlite3"
+
+
 
 get "/" do
     @name = "Sebastian Echeverri"
@@ -74,5 +80,30 @@ post '/login' do
     response.set_cookie('password', value: params[:password])
     redirect '/'
 end
+
+get '/' do
+    if request.cookies["email"] && request
+    @posts = Post.all
+    @name = 'Sebastian'
+    erb :home
+    else
+        redirect '/login'
+    end
+end
+
+post  '/post' do
+    @post = Post.create(title: params[:title], body: params[:body])
+    redirect '/'
+    end
+end
+
+get "/post/:id" do
+    @post = Post.find(params[:id])
+    erb :post_page
+    end
+end
+
+
+
  
 #HTTParty.put('http://localhost:4567/make-a-put', :headers => {"Content-Type" => 'application/json'})
